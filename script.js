@@ -11,18 +11,18 @@ async function handleFetch() {
 
   let pokeName = data.name;
   let pokeId = data.id;
- /*  let pokeType = data.types.type.name; */
+  let pokeType = data.types;
   let pokeSprite = data.sprites.front_default;
   console.log(pokeName);
   console.log(pokeId);
-/*   console.log(pokeType); */
+  console.log(pokeType);
   console.log(pokeSprite);
   divOutput.innerHTML = `
      <div class="card">
      <img class="card-img-top" src ="${pokeSprite}"> 
       <div class="card-body">
-        <h3 class="card-title">${pokeName}</h3>
-        <p class="card-text">${pokeId}</p>
+        <h3 class="card-title">Name: ${pokeName}</h3>
+        <p class="card-text">ID: ${pokeId}</p>
       </div>
     </div> 
   `;
